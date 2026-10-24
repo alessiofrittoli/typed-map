@@ -1,36 +1,36 @@
-<h1 align="center">Node Module Starter 🛠️</h1>
+<h1 align="center">TypedMap 🗺️</h1>
 <h2 align="center">
-  Starter repository for developing node_modules
+  Handle strictly typed Maps
 </h2>
 <p align="center">
-  <a href="https://npmjs.org/package/@alessiofrittoli/node-module-starter">
-    <img src="https://img.shields.io/npm/v/@alessiofrittoli/node-module-starter" alt="Latest version"/>
+  <a href="https://npmjs.org/package/@alessiofrittoli/typed-map">
+    <img src="https://img.shields.io/npm/v/@alessiofrittoli/typed-map" alt="Latest version"/>
   </a>
-  <a href="https://coveralls.io/github/alessiofrittoli/node-module-starter">
-    <img src="https://coveralls.io/repos/github/alessiofrittoli/node-module-starter/badge.svg" alt="Test coverage"/>
+  <a href="https://coveralls.io/github/alessiofrittoli/typed-map">
+    <img src="https://coveralls.io/repos/github/alessiofrittoli/typed-map/badge.svg" alt="Test coverage"/>
   </a>
-  <a href="https://socket.dev/npm/package/@alessiofrittoli/node-module-starter/overview">
-    <img src="https://socket.dev/api/badge/npm/package/@alessiofrittoli/node-module-starter" alt="Socket Security score"/>
+  <a href="https://socket.dev/npm/package/@alessiofrittoli/typed-map/overview">
+    <img src="https://socket.dev/api/badge/npm/package/@alessiofrittoli/typed-map" alt="Socket Security score"/>
   </a>
-  <a href="https://npmjs.org/package/@alessiofrittoli/node-module-starter">
-    <img src="https://img.shields.io/npm/dm/@alessiofrittoli/node-module-starter.svg" alt="npm downloads"/>
+  <a href="https://npmjs.org/package/@alessiofrittoli/typed-map">
+    <img src="https://img.shields.io/npm/dm/@alessiofrittoli/typed-map.svg" alt="npm downloads"/>
   </a>
-  <a href="https://bundlephobia.com/package/@alessiofrittoli/node-module-starter">
-    <img src="https://badgen.net/bundlephobia/dependency-count/@alessiofrittoli/node-module-starter" alt="Dependencies"/>
+  <a href="https://bundlephobia.com/package/@alessiofrittoli/typed-map">
+    <img src="https://badgen.net/bundlephobia/dependency-count/@alessiofrittoli/typed-map" alt="Dependencies"/>
   </a>
-  <a href="https://libraries.io/npm/%40alessiofrittoli%2Fnode-module-starter">
-    <img src="https://img.shields.io/librariesio/release/npm/@alessiofrittoli/node-module-starter" alt="Dependencies status"/>
+  <a href="https://libraries.io/npm/%40alessiofrittoli%2Ftyped-map">
+    <img src="https://img.shields.io/librariesio/release/npm/@alessiofrittoli/typed-map" alt="Dependencies status"/>
   </a>
 </p>
 <p align="center">
-  <a href="https://bundlephobia.com/package/@alessiofrittoli/node-module-starter">
-    <img src="https://badgen.net/bundlephobia/min/@alessiofrittoli/node-module-starter" alt="minified"/>
+  <a href="https://bundlephobia.com/package/@alessiofrittoli/typed-map">
+    <img src="https://badgen.net/bundlephobia/min/@alessiofrittoli/typed-map" alt="minified"/>
   </a>
-  <a href="https://bundlephobia.com/package/@alessiofrittoli/node-module-starter">
-    <img src="https://badgen.net/bundlephobia/minzip/@alessiofrittoli/node-module-starter" alt="minizipped"/>
+  <a href="https://bundlephobia.com/package/@alessiofrittoli/typed-map">
+    <img src="https://badgen.net/bundlephobia/minzip/@alessiofrittoli/typed-map" alt="minizipped"/>
   </a>
-  <a href="https://bundlephobia.com/package/@alessiofrittoli/node-module-starter">
-    <img src="https://badgen.net/bundlephobia/tree-shaking/@alessiofrittoli/node-module-starter" alt="Tree shakable"/>
+  <a href="https://bundlephobia.com/package/@alessiofrittoli/typed-map">
+    <img src="https://badgen.net/bundlephobia/tree-shaking/@alessiofrittoli/typed-map" alt="Tree shakable"/>
   </a>
 </p>
 <p align="center">
@@ -55,40 +55,23 @@
     - [Run tests with coverage](#run-tests-with-coverage)
   - [Contributing](#contributing)
   - [Security](#security)
+- [API Reference](#api-reference)
 - [Credits](#made-with-)
 
 ---
 
-### Getting started (delete once cloned in your project)
+### Getting started
 
-Run the following command to start using `node-module-starter` for your projects:
-
-```bash
-git clone git@github.com:alessiofrittoli/node-module-starter.git && git remote remove origin
-```
-
-install dependencies
+Run the following command to start using `@alessiofrittoli/typed-map` in your projects:
 
 ```bash
-pnpm i
-```
-
-Read the [Creating a repository from a template - GitHub Docs](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) for more in-detail informations about creating a new Repository from a template using GitHub web interface.
-
----
-
-### Getting started (customize based on your project needs)
-
-Run the following command to start using `{package_name}` in your projects:
-
-```bash
-npm i {package_name}
+npm i @alessiofrittoli/typed-map
 ```
 
 or using `pnpm`
 
 ```bash
-pnpm i {package_name}
+pnpm i @alessiofrittoli/typed-map
 ```
 
 ---
@@ -168,6 +151,120 @@ Help keep this project up to date with [GitHub Sponsor][sponsor-url].
 #### Security
 
 If you believe you have found a security vulnerability, we encourage you to **_responsibly disclose this and NOT open a public issue_**. We will investigate all legitimate reports. Email `security@alessiofrittoli.it` to disclose any security vulnerabilities.
+
+---
+
+#### API Reference
+
+##### Interface `TypedMap<T, P, K>`
+
+A type-safe extension of the Map class that enforces key-value relationships based on a provided type.
+
+<details>
+
+<summary style="cursor:pointer">Type parameters</summary>
+
+| Parameter | Type                      | Default   | Description                                                                         |
+| --------- | ------------------------- | --------- | ----------------------------------------------------------------------------------- |
+| `T`       | `Record<string, unknown>` | `unknown` | The object type defining the key-value relationships.                               |
+| `P`       | `boolean`                 | `true`    | Defines whether the `Map.get()` method should return a possibily `undefined` value. |
+| `K`       | `keyof T`                 | `keyof T` | Internal - The subset of keys in T that are allowed in the Map.                     |
+
+</details>
+
+---
+
+##### `getTypedMap<T, P, K>`
+
+Creates a new instance of a type-safe `Map` with the given type.
+
+<details>
+
+<summary style="cursor:pointer">Type parameters</summary>
+
+- See [Interface `TypedMap<T, P, K>` - Type parameters](#interface-typedmapt-p-k)
+
+</details>
+
+---
+
+<details>
+
+<summary style="cursor:pointer">Parameters</summary>
+
+| Parameter  | Type                                       | Description                                |
+| ---------- | ------------------------------------------ | ------------------------------------------ |
+| `iterable` | `Iterable<readonly [ K, T[ K ] ]> \| null` | Initial `Map` constructor iterable object. |
+
+</details>
+
+---
+
+<details>
+
+<summary style="cursor:pointer">Returns</summary>
+
+Type: `TypedMap<T, P, K>`
+
+A new instance of a type-safe `Map`.
+
+</details>
+
+---
+
+<details>
+
+<summary style="cursor:pointer">Usage</summary>
+
+###### Basic usage
+
+```ts
+import { getTypedMap } from '@alessiofrittoli/typed-map'
+
+interface User {
+  name: string
+  age: number
+  isActive: boolean
+}
+
+const user = getTypedMap<User>([
+  ['name', 'Foo'],
+  ['age', 27],
+  ['isActive', true],
+])
+
+console.log(user.get('name')) // type: `string | undefined`
+console.log(user.get('age')) // type: `number | undefined`
+console.log(user.get('isActive')) // type: `boolean | undefined`
+```
+
+---
+
+###### Respect the given type
+
+```ts
+import { getTypedMap } from '@alessiofrittoli/typed-map'
+
+interface User {
+  name: string
+  age: number
+  isActive: boolean
+  banned?: boolean
+}
+
+const user = getTypedMap<User, false>([
+  ['name', 'Foo'],
+  ['age', 27],
+  ['isActive', true],
+])
+
+console.log(user.get('name')) // type: `string`
+console.log(user.get('age')) // type: `number`
+console.log(user.get('isActive')) // type: `boolean`
+console.log(user.get('banned')) // type: `boolean | undefined`
+```
+
+</details>
 
 ---
 

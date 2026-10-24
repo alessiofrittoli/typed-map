@@ -2,14 +2,12 @@
 	"name": "Tagging ruleset",
 	"target": "tag",
 	"source_type": "Repository",
-	"source": "alessiofrittoli/node-module-starter",
+	"source": "alessiofrittoli/typed-map",
 	"enforcement": "active",
 	"conditions": {
 		"ref_name": {
 			"exclude": [],
-			"include": [
-				"~ALL"
-			]
+			"include": ["~ALL"]
 		}
 	},
 	"rules": [

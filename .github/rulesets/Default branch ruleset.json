@@ -2,15 +2,12 @@
 	"name": "Default branch ruleset",
 	"target": "branch",
 	"source_type": "Repository",
-	"source": "alessiofrittoli/node-module-starter",
+	"source": "alessiofrittoli/typed-map",
 	"enforcement": "active",
 	"conditions": {
 		"ref_name": {
 			"exclude": [],
-			"include": [
-				"~DEFAULT_BRANCH",
-				"refs/heads/releases/**/*"
-			]
+			"include": ["~DEFAULT_BRANCH", "refs/heads/releases/**/*"]
 		}
 	},
 	"rules": [
@@ -41,10 +38,7 @@
 				"require_last_push_approval": true,
 				"required_review_thread_resolution": true,
 				"automatic_copilot_code_review_enabled": false,
-				"allowed_merge_methods": [
-					"squash",
-					"rebase"
-				]
+				"allowed_merge_methods": ["squash", "rebase"]
 			}
 		},
 		{

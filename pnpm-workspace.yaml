@@ -2,4 +2,4 @@ allowBuilds:
   '@alessiofrittoli/fetcher': false
   '@alessiofrittoli/type-utils': false
 minimumReleaseAgeExclude:
-  - '@alessiofrittoli/*'
+  - '@alessiofrittoli/package-configs@1.8.1'

@@ -1,6 +1,6 @@
 {
 	"name": "@alessiofrittoli/typed-map",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "Handle strictly typed Maps",
 	"type": "module",
 	"author": {

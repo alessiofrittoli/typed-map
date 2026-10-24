@@ -1,6 +1,6 @@
 {
 	"name": "@alessiofrittoli/typed-map",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"description": "Handle strictly typed Maps",
 	"type": "module",
 	"author": {
@@ -68,7 +68,7 @@
 		"dev": "tsdown --watch",
 		"build": "pnpm lint && pnpm tsdown",
 		"lint": "oxlint --report-unused-disable-directives --max-warnings 0",
-		"release": "node scripts/release.ts --verbose",
+		"release": "node scripts/release.ts --verbose --npm",
 		"//2a": "*********************************************************************",
 		"//2b": "***************************** UNIT TESTS ****************************",
 		"//2c": "*********************************************************************",
